@@ -28,8 +28,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid gray;
-    border-radius: 12px;
+    /* border: 1px solid gray;
+    border-radius: 12px; */
     background-color: #22272e;;
 }
 
@@ -41,15 +41,27 @@ body{
     align-items: baseline;
     justify-content: center;
     padding: 20px;
+    gap: 20px;
 }
 
 .search-text{
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 20px;
     text-decoration: none;
     color: white;
     border: 1px outset;
     border-radius: 12px;
+}
+
+.resCardHolder{
+    display: flex;
+    flex-direction: column;
+    align-self: self-start;
+    align-items: flex-start;
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 20px;
 }
