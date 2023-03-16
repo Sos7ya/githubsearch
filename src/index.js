@@ -20,13 +20,13 @@ document.getElementById('form').addEventListener('submit', async (e) =>  {
         clearInput();
         showResults(results);
         console.log(results);
-        
+        inputValidation(inputValue);
         
     }
     else{
         document.getElementById('results').innerHTML = `<p>"There is no response!"</p>`;
     }
-    inputValidation(inputValue);
+    
 });
 
 function showResults(results){
@@ -64,10 +64,10 @@ function inputValidation(inputValue){
     if(inputValue == 0){
         document.getElementById('results').innerHTML = `<p>Запрос не может быть пустым</p>`;
     }
-    else if(inputValue.length < 4){
+    if(inputValue.length < 4){
         document.getElementById('results').innerHTML = `<p>Запрос не может быть короче 3 символов</p>`
     }
-    else if(inputValue.search(/[^A-Za-z0-9_]\s/) > -1){
+    if(inputValue.search(/[-!"#$%&'()*+,./:;<=>?@[\\\]_`{|}~]/) > -1){
         document.getElementById('results').innerHTML = `<p>Запрос не должен содержать данный знак</p>`
     }
 }
