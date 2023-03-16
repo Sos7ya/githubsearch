@@ -70,4 +70,7 @@ function inputValidation(inputValue){
     if(inputValue.search(/[-!"#$%&'()*+,./:;<=>?@[\\\]_`{|}~]/) > -1){
         document.getElementById('results').innerHTML = `<p>Запрос не должен содержать данный знак</p>`
     }
+    if(inputValue.toString()[0] == ' '){
+        document.getElementById('results').innerHTML = `<p>Запрос не должен начинаться с пробела</p>`
+    }
 }
